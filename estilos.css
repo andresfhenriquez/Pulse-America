@@ -1,4 +1,3 @@
-
 @font-face {
 	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot');
@@ -9,91 +8,87 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 a
 {
-	color:#dd4f24;
-
+	color: #DD4F24;
 }
 body
 {
-	background:#EFEFEF;
-	color:#4c4c4c;
-	font-family: "PT Sans";
+	background: #EFEFEF;
+	color: #4C4C4C;
+	font-family: "PT Sans", Arial;
 	font-size: 16px;
 	margin: 0;
-
+}
+/*
+comentario de lo que sea
+*/
+footer
+{
+	background: #434343;
+	color: #A7A7A7;
+	padding: 1em 0;
+	text-align: center;
+	width: 100%;
+}
+footer p
+{
+	margin: 0;
 }
 header
 {
-	border: 1px red solid;
-	color: white;
 	background: #434343;
-	margin: 0 ;
+	color: white;
+	margin: 0;
 	padding: 0.5em;
 }
-header figure, header h1
-{
-	display: inline-block;
-	vertical-align: top;
+header:after{
+	clear: both;
+	content: "";
+	display: block;
 }
-
+header figure
+{
+	float: left;
+}
 header h1
 {
 	font-size: 20px;
 	font-weight: normal;
-	margin:1em 0 0 1em;
-	width: 60%;
+	margin: 1em 85px 1em 100px;
+	display: block;
 }
-
 header #avatar
 {
-	float: right;
-	margin:1em 1em 0 0;
+	position:  absolute;
+	top: 0;
+	right: 0;
+	margin: 1em 1em 0 0;
 }
 header #avatar figcaption
 {
-	background:#22BCE0;
+	background: #22BCE0;
 	float: right;
-	height: 50px;	
+	height: 50px;
+	line-height: 50px;
 }
 header #avatar figcaption:after
 {
-	content: "\e601";
+	content: "\e001";
 	font-family: "icomoon";
 	font-size: 0.7em;
-	line-height: 50px;
 	opacity: 0.5;
 }
-
 header #avatar img
 {
-	float:left;
+	float: left;
 	width: 50px;
-}
-header #home_btn
-{
-	font-family: "PT Sans";
-	font-size: 0.9em;
-	color: white;
-	vertical-align: bottom;
-	background: #22bce0;
-	color: white;
-	text-decoration:none;
-	padding: 0.2em 0.5em;
-	border-radius:0.5em;
-	
-} 
-header #home_btn figcaption
-{
-	float: right;
-	height: 10px;
-	padding: 0 5px;
 }
 header #logo img
 {
-	width:80px;
+	width: 80px;
 }
-
 nav
 {
 	background: #878787;
@@ -101,117 +96,122 @@ nav
 }
 nav ul
 {
-	list-style:none;
+	list-style: none;
 	margin: 0;
 	padding: 0;
 }
-
 nav ul li
 {
 	display: inline-block;
 	margin: 0 1.2em 0 0;
 	vertical-align: top;
-
 }
-nav ul li a 
+nav ul li a
 {
 	color: white;
 	display: block;
 	padding: 0.5em 0;
-
 }
 nav #flechita_nav a
 {
 	background: #22BCE0;
-	padding: 0.5em 0.0em;
+	padding: 0.5em 0;
 	text-decoration: none;
-
 }
 nav #flechita_nav a:after
 {
-	content: "\e600";
+	content: "\e000";
 	font-family: "icomoon";
-	font-size: 0.8em;
-	opacity: 0.5;
+	opacity: 0.6;
 }
-nav #publicar_nav 
+nav #publicar_nav
 {
+	/*i is zorri*/
+	background: #DD4F24;
 	float: right;
-	margin-right: 0;
-	background:#dd4f24; 
-	padding-right: 0.8em;
+	margin-right: 0; 
+	padding-right: 1em;
 	position: relative;
 }
-nav #publicar_nav:after 
+nav #publicar_nav:after
 {
 	color: rgba(255,255,255,0.5);
-	content: "\e603";
+	content:  "\e004";
 	font-family: "icomoon";
-	position:absolute;
+	font-size: 1.8em;
+	position: absolute;
 	right: 0;
 	top: 0;
-	font-size: 1.8em;
 }
 nav #publicar_nav a
 {
 	display: inline-block;
-	background: #dd4f24;
-	padding: 0.5em 1em;	
+	padding: 0.5em 1em;
 	text-decoration: none;
+}
+#bienvenida
+{
+	display: none;
 }
 #contenido
 {
-	
 	margin: 1em;
 }
 #contenido .item
 {
 	background: white;
-	border-bottom: 3px #22bec0 solid;
-	position: relative;
+	border-bottom: 3px #22BCE0 solid;
 	margin-bottom: 3em;
 	min-height: 128px;
-	
+	position: relative;
 }
 #contenido .item p
 {
+	color: #7A7A7A;
 	font-size: 0.9em;
-	color: #7a7a7a;
+}
+#contenido .item .datos_item
+{
+	text-align: right;
 }
 #contenido .item .datos_item .comentarios_item
 {
-	text-decoration: none;
-	background-color:#878787;
+	background: #878787;
+	border-radius: 4px;
 	color: white;
-	padding: 4px;
-	border-radius: 4px; 
 	margin: 0 0 0 2em;
+	padding: 4px;
+	position: relative;
+	text-decoration: none;
+}
+#contenido .item .datos_item .comentarios_item:after{
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #878787;
+	content: "";
+	left :10px;
+	position: absolute;
+	top:100%;
 }
 #contenido .item .datos_item .guardar_item
 {
 	margin: 0 1em;
 	text-decoration: none;
 }
-
 #contenido .item .datos_item .guardar_item:after
 {
-	color: #fd5;
-	content: "\e604";
+	color: #FD5;
+	content: "\e003";
 	font-family: "icomoon";
 }
-#contenido .item .datos_item
-{
-	text-align: right;
-}
-
 #contenido .item .datos_item .tag_item
 {
-	background: #22bce0;
+	background: #22BCE0;
+	border-radius: 0.5em;
 	color: white;
-	text-decoration:none;
 	float: left;
 	padding: 0.2em 0.5em;
-	border-radius:0.5em;
+	text-decoration: none;
 }
 #contenido .item .imagen_item
 {
@@ -222,11 +222,11 @@ nav #publicar_nav a
 {
 	width: 96px;
 }
-#contenido .item .titulo_item 
+#contenido .item .titulo_item
 {
-	font-size: 1em;	
-	padding: 0.5em 0.5em 0 0;
+	font-size: 1em;
 	font-style: italic;
+	padding: 0.5em 0.5em 0;
 }
 #contenido .item .titulo_item a
 {
@@ -236,32 +236,41 @@ nav #publicar_nav a
 #contenido .item .votacion
 {
 	background: white;
+	border-radius: 0 0 0.5em 0.5em;
 	margin: 3px 0 0 0;
 	padding: 0.5em 0;
 	position: absolute;
 	text-align: center;
-	top:100%;
+	top: 100%;
 	width: 96px;
-	border-radius: 0 0 0.5em 0.5em;
-
-}
-#contenido .item .votacion .down:after,#contenido .item .votacion .up:after
-{
-	font-family:"icomoon";
-	font-size: 1.5em;
-	vertical-align:bottom;
-}
-#contenido .item .votacion .down:after
-{
-	content: "\e601";
-	color: red;	
 }
 #contenido .item .votacion a
 {
 	text-decoration: none;
 }
+#contenido .item .votacion .down:after,
 #contenido .item .votacion .up:after
 {
-	content: "\e602";
-	color: green;
+	font-family: "icomoon";
+	font-size: 1.5em;
+	vertical-align: bottom;
 }
+#contenido .item .votacion .down:after
+{
+	color: red;
+	content: "\e001";
+}
+#contenido .item .votacion .up:after
+{
+	color: green;
+	content: "\e002";
+}
+
+
+
+
+
+
+
+
+

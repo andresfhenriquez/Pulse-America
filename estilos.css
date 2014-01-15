@@ -1,3 +1,14 @@
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 a
 {
 	color:#dd4f24;
@@ -43,8 +54,15 @@ header #avatar figcaption
 {
 	background:#22BCE0;
 	float: right;
-	height: 50px;
-	padding: 0 2px;
+	height: 50px;	
+}
+header #avatar figcaption:after
+{
+	content: "\e601";
+	font-family: "icomoon";
+	font-size: 0.7em;
+	line-height: 50px;
+	opacity: 0.5;
 }
 
 header #avatar img
@@ -86,6 +104,20 @@ nav ul
 	margin: 0;
 	padding: 0;
 }
+nav ul #home
+{
+    background: #22BCE0;
+    position: absolute;
+    width: 16%;
+    height: 10px;
+    left: 16.8em;
+    top: 77px;
+    text-decoration: none;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 3px;
+    padding-left: 5px;
+
+}
 nav ul li
 {
 	display: inline-block;
@@ -103,17 +135,38 @@ nav ul li a
 nav #flechita_nav a
 {
 	background: #22BCE0;
-	padding: 0.5em 0.5em;
+	padding: 0.5em 0.0em;
 	text-decoration: none;
 
+}
+nav #flechita_nav a:after
+{
+	content: "\e600";
+	font-family: "icomoon";
+	font-size: 0.8em;
+	opacity: 0.5;
 }
 nav #publicar_nav 
 {
 	float: right;
 	margin-right: 0;
+	background:#dd4f24; 
+	padding-right: 0.8em;
+	position: relative;
+}
+nav #publicar_nav:after 
+{
+	color: rgba(255,255,255,0.5);
+	content: "\e603";
+	font-family: "icomoon";
+	position:absolute;
+	right: 0;
+	top: 0;
+	font-size: 1.8em;
 }
 nav #publicar_nav a
 {
+	display: inline-block;
 	background: #dd4f24;
 	padding: 0.5em 1em;	
 	text-decoration: none;
@@ -137,11 +190,38 @@ nav #publicar_nav a
 	font-size: 0.9em;
 	color: #7a7a7a;
 }
+#contenido .item .datos_item .comentarios_item
+{
+	text-decoration: none;
+	background-color:#878787;
+	color: white;
+	padding: 4px;
+	border-radius: 4px; 
+	margin: 0 0 0 2em;
+}
+#contenido .item .datos_item .guardar_item
+{
+	margin: 0 1em;
+	text-decoration: none;
+}
+
+#contenido .item .datos_item .guardar_item:after
+{
+	color: #fd5;
+	content: "\e604";
+	font-family: "icomoon";
+}
+#contenido .item .datos_item
+{
+	text-align: right;
+}
+
 #contenido .item .datos_item .tag_item
 {
 	background: #22bce0;
 	color: white;
 	text-decoration:none;
+	float: left;
 	padding: 0.2em 0.5em;
 	border-radius:0.5em;
 }
@@ -176,4 +256,24 @@ nav #publicar_nav a
 	width: 96px;
 	border-radius: 0 0 0.5em 0.5em;
 
+}
+#contenido .item .votacion .down:after,#contenido .item .votacion .up:after
+{
+	font-family:"icomoon";
+	font-size: 1.5em;
+	vertical-align:bottom;
+}
+#contenido .item .votacion .down:after
+{
+	content: "\e601";
+	color: red;	
+}
+#contenido .item .votacion a
+{
+	text-decoration: none;
+}
+#contenido .item .votacion .up:after
+{
+	content: "\e602";
+	color: green;
 }

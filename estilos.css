@@ -93,6 +93,7 @@ header #logo img
 {
 	width:80px;
 }
+
 nav
 {
 	background: #878787;
@@ -104,20 +105,7 @@ nav ul
 	margin: 0;
 	padding: 0;
 }
-nav ul #home
-{
-    background: #22BCE0;
-    position: absolute;
-    width: 16%;
-    height: 10px;
-    left: 16.8em;
-    top: 77px;
-    text-decoration: none;
-    border-radius: 5px 5px 0 0;
-    margin-bottom: 3px;
-    padding-left: 5px;
 
-}
 nav ul li
 {
 	display: inline-block;
